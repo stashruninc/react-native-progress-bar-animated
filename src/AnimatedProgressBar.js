@@ -26,7 +26,7 @@ class ProgressBar extends React.Component {
     }
   }
 
-  componentWillReceiveProps(props) {
+  UNSAFE_componentWillReceiveProps(props) {
     if (props.value !== this.state.progress) {
       if (props.value >= 0 && props.value <= this.props.maxValue) {
         this.setState({ progress: props.value }, () => {
